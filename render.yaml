@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: zeikin-calc
+    env: docker
+    dockerfilePath: ./Dockerfile
+    port: 3000
