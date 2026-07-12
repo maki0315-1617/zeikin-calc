@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ロン君の消費税計算サイト</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="card">
+        <h1 class="title">
+          <span>ロン君の消費税計算サイト</span>
+          <svg class="cat-icon" viewBox="0 0 64 64" aria-hidden="true">
+            <circle cx="32" cy="32" r="26" fill="#111111" />
+            <path d="M20 20c3-7 11-10 15-10s12 3 15 10c-3-2-7-3-10-3-3 0-6 1-10 3-2 0-4 0-5 0Z" fill="#111111" />
+            <path d="M24 24l-8-7" stroke="#111111" stroke-width="3" stroke-linecap="round" />
+            <path d="M40 24l8-7" stroke="#111111" stroke-width="3" stroke-linecap="round" />
+            <circle cx="26" cy="32" r="2.5" fill="#ffffff" />
+            <circle cx="38" cy="32" r="2.5" fill="#ffffff" />
+            <path d="M24 40c3 2 6 3 8 3s5-1 8-3" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M22 46c3 3 7 5 10 5s7-2 10-5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+          </svg>
+        </h1>
+        <p class="subtitle">税抜金額を入力すると、税金と税込金額が自動で計算されます。税抜金額にはプラス記号で区切って複数入力可能です。</p>
+
+        <div class="summary">
+          <span class="summary-label">合計金額</span>
+          <strong id="total">¥0</strong>
+        </div>
+
+        <div class="actions">
+          <button type="button" id="clear-btn">クリア</button>
+        </div>
+
+        <div class="table">
+          <div class="table-head">
+            <div>税率</div>
+            <div>税抜金額</div>
+            <div>税金</div>
+            <div>税込金額</div>
+          </div>
+
+          <div class="rate-row" data-rate="1">
+            <div class="rate-label">1%</div>
+            <div class="cell input-cell">
+              <input id="amount-1" class="amount-input" type="text" inputmode="text" placeholder="例: 1000+2000" />
+              <button type="button" class="plus-btn" data-target="amount-1">+</button>
+            </div>
+            <div class="cell result" id="tax-1">¥0</div>
+            <div class="cell result included" id="included-1">¥0</div>
+          </div>
+
+          <div class="rate-row" data-rate="2">
+            <div class="rate-label">2%</div>
+            <div class="cell input-cell">
+              <input id="amount-2" class="amount-input" type="text" inputmode="text" placeholder="例: 1000+2000" />
+              <button type="button" class="plus-btn" data-target="amount-2">+</button>
+            </div>
+            <div class="cell result" id="tax-2">¥0</div>
+            <div class="cell result included" id="included-2">¥0</div>
+          </div>
+
+          <div class="rate-row" data-rate="3">
+            <div class="rate-label">3%</div>
+            <div class="cell input-cell">
+              <input id="amount-3" class="amount-input" type="text" inputmode="text" placeholder="例: 1000+2000" />
+              <button type="button" class="plus-btn" data-target="amount-3">+</button>
+            </div>
+            <div class="cell result" id="tax-3">¥0</div>
+            <div class="cell result included" id="included-3">¥0</div>
+          </div>
+
+          <div class="rate-row" data-rate="4">
+            <div class="rate-label">4%</div>
+            <div class="cell input-cell">
+              <input id="amount-4" class="amount-input" type="text" inputmode="text" placeholder="例: 1000+2000" />
+              <button type="button" class="plus-btn" data-target="amount-4">+</button>
+            </div>
+            <div class="cell result" id="tax-4">¥0</div>
+            <div class="cell result included" id="included-4">¥0</div>
+          </div>
+
+          <div class="rate-row" data-rate="5">
+            <div class="rate-label">5%</div>
+            <div class="cell input-cell">
+              <input id="amount-5" class="amount-input" type="text" inputmode="text" placeholder="例: 1000+2000" />
+              <button type="button" class="plus-btn" data-target="amount-5">+</button>
+            </div>
+            <div class="cell result" id="tax-5">¥0</div>
+            <div class="cell result included" id="included-5">¥0</div>
+          </div>
+
+          <div class="rate-row" data-rate="6">
+            <div class="rate-label">6%</div>
+            <div class="cell input-cell">
+              <input id="amount-6" class="amount-input" type="text" inputmode="text" placeholder="例: 1000+2000" />
+              <button type="button" class="plus-btn" data-target="amount-6">+</button>
+            </div>
+            <div class="cell result" id="tax-6">¥0</div>
+            <div class="cell result included" id="included-6">¥0</div>
+          </div>
+
+          <div class="rate-row" data-rate="7">
+            <div class="rate-label">7%</div>
+            <div class="cell input-cell">
+              <input id="amount-7" class="amount-input" type="text" inputmode="text" placeholder="例: 1000+2000" />
+              <button type="button" class="plus-btn" data-target="amount-7">+</button>
+            </div>
+            <div class="cell result" id="tax-7">¥0</div>
+            <div class="cell result included" id="included-7">¥0</div>
+          </div>
+
+          <div class="rate-row" data-rate="8">
+            <div class="rate-label">8%</div>
+            <div class="cell input-cell">
+              <input id="amount-8" class="amount-input" type="text" inputmode="text" placeholder="例: 1000+2000" />
+              <button type="button" class="plus-btn" data-target="amount-8">+</button>
+            </div>
+            <div class="cell result" id="tax-8">¥0</div>
+            <div class="cell result included" id="included-8">¥0</div>
+          </div>
+
+          <div class="rate-row" data-rate="9">
+            <div class="rate-label">9%</div>
+            <div class="cell input-cell">
+              <input id="amount-9" class="amount-input" type="text" inputmode="text" placeholder="例: 1000+2000" />
+              <button type="button" class="plus-btn" data-target="amount-9">+</button>
+            </div>
+            <div class="cell result" id="tax-9">¥0</div>
+            <div class="cell result included" id="included-9">¥0</div>
+          </div>
+
+          <div class="rate-row" data-rate="10">
+            <div class="rate-label">10%</div>
+            <div class="cell input-cell">
+              <input id="amount-10" class="amount-input" type="text" inputmode="text" placeholder="例: 1000+2000" />
+              <button type="button" class="plus-btn" data-target="amount-10">+</button>
+            </div>
+            <div class="cell result" id="tax-10">¥0</div>
+            <div class="cell result included" id="included-10">¥0</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const rows = document.querySelectorAll('.rate-row');
+      const totalElement = document.getElementById('total');
+      const clearButton = document.getElementById('clear-btn');
+      const amountInputs = document.querySelectorAll('.amount-input');
+
+      const formatCurrency = (value) => {
+        return new Intl.NumberFormat('ja-JP', {
+          style: 'currency',
+          currency: 'JPY',
+          maximumFractionDigits: 0,
+        }).format(value);
+      };
+
+      const sanitizeInput = (input) => {
+        let value = input.value.replace(/[^\d+]/g, '');
+        value = value.replace(/\+{2,}/g, '+');
+        input.value = value;
+        return value;
+      };
+
+      const calculate = () => {
+        let total = 0;
+
+        rows.forEach((row) => {
+          const rate = Number(row.dataset.rate);
+          const input = row.querySelector('.amount-input');
+          const taxElement = row.querySelector('.result:not(.included)');
+          const includedElement = row.querySelector('.included');
+          const rawValue = sanitizeInput(input);
+          const amount = rawValue
+            .split('+')
+            .filter(Boolean)
+            .reduce((sum, token) => sum + Number(token || 0), 0);
+          const tax = amount * (rate / 100);
+          const included = amount + tax;
+
+          taxElement.textContent = formatCurrency(tax);
+          includedElement.textContent = formatCurrency(included);
+          total += included;
+        });
+
+        totalElement.textContent = formatCurrency(total);
+      };
+
+      amountInputs.forEach((input) => {
+        input.addEventListener('input', calculate);
+      });
+
+      document.querySelectorAll('.plus-btn').forEach((button) => {
+        button.addEventListener('click', () => {
+          const targetInput = document.getElementById(button.dataset.target);
+          if (!targetInput) return;
+          const value = targetInput.value.trim();
+          targetInput.value = value ? `${value}+` : '+';
+          targetInput.focus();
+          calculate();
+        });
+      });
+
+      clearButton.addEventListener('click', () => {
+        amountInputs.forEach((input) => {
+          input.value = '';
+        });
+        calculate();
+      });
+
+      calculate();
+    </script>
+  </body>
+</html>
