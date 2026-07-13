@@ -26,6 +26,13 @@
         </div>
         <button type="button" id="clear-btn">&#x21BA; クリア</button>
       </div>
+
+      <!-- 占いリンク行 -->
+      <div class="header-nav">
+        <a href="https://my-js-page.onrender.com/" target="_blank" rel="noopener noreferrer" class="fortune-btn">
+          ✨ ロンの運勢占い
+        </a>
+      </div>
     </header>
 
     <main class="app">
@@ -39,16 +46,16 @@
         <!-- 0% -->
         <div class="rate-card" data-rate="0">
           <div class="card-row1">
-            <div class="rate-badge">0%</div>
-            <span class="row-label">税抜金額</span>
+            <div class="rate-badge"><span class="badge-num">0</span><span class="badge-pct">%</span></div>
+            <span class="pill pill-blue">税抜金額</span>
             <input id="amount-0" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-0" title="＋で区切る">+</button>
           </div>
           <div class="card-row2">
-            <span class="row-label">税金</span>
+            <span class="pill pill-navy">税金</span>
             <div class="result tax-result" id="tax-0">¥0</div>
             <span class="arrow">→</span>
-            <span class="row-label">税込</span>
+            <span class="pill pill-green">税込</span>
             <div class="result included-result" id="included-0">¥0</div>
             <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
           </div>
@@ -57,16 +64,16 @@
         <!-- 1% -->
         <div class="rate-card" data-rate="1">
           <div class="card-row1">
-            <div class="rate-badge">1%</div>
-            <span class="row-label">税抜金額</span>
+            <div class="rate-badge"><span class="badge-num">1</span><span class="badge-pct">%</span></div>
+            <span class="pill pill-blue">税抜金額</span>
             <input id="amount-1" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-1" title="＋で区切る">+</button>
           </div>
           <div class="card-row2">
-            <span class="row-label">税金</span>
+            <span class="pill pill-navy">税金</span>
             <div class="result tax-result" id="tax-1">¥0</div>
             <span class="arrow">→</span>
-            <span class="row-label">税込</span>
+            <span class="pill pill-green">税込</span>
             <div class="result included-result" id="included-1">¥0</div>
             <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
           </div>
@@ -75,16 +82,16 @@
         <!-- 2% -->
         <div class="rate-card" data-rate="2">
           <div class="card-row1">
-            <div class="rate-badge">2%</div>
-            <span class="row-label">税抜金額</span>
+            <div class="rate-badge"><span class="badge-num">2</span><span class="badge-pct">%</span></div>
+            <span class="pill pill-blue">税抜金額</span>
             <input id="amount-2" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-2" title="＋で区切る">+</button>
           </div>
           <div class="card-row2">
-            <span class="row-label">税金</span>
+            <span class="pill pill-navy">税金</span>
             <div class="result tax-result" id="tax-2">¥0</div>
             <span class="arrow">→</span>
-            <span class="row-label">税込</span>
+            <span class="pill pill-green">税込</span>
             <div class="result included-result" id="included-2">¥0</div>
             <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
           </div>
@@ -93,16 +100,16 @@
         <!-- 3% -->
         <div class="rate-card" data-rate="3">
           <div class="card-row1">
-            <div class="rate-badge">3%</div>
-            <span class="row-label">税抜金額</span>
+            <div class="rate-badge"><span class="badge-num">3</span><span class="badge-pct">%</span></div>
+            <span class="pill pill-blue">税抜金額</span>
             <input id="amount-3" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-3" title="＋で区切る">+</button>
           </div>
           <div class="card-row2">
-            <span class="row-label">税金</span>
+            <span class="pill pill-navy">税金</span>
             <div class="result tax-result" id="tax-3">¥0</div>
             <span class="arrow">→</span>
-            <span class="row-label">税込</span>
+            <span class="pill pill-green">税込</span>
             <div class="result included-result" id="included-3">¥0</div>
             <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
           </div>
@@ -111,16 +118,16 @@
         <!-- 4% -->
         <div class="rate-card" data-rate="4">
           <div class="card-row1">
-            <div class="rate-badge">4%</div>
-            <span class="row-label">税抜金額</span>
+            <div class="rate-badge"><span class="badge-num">4</span><span class="badge-pct">%</span></div>
+            <span class="pill pill-blue">税抜金額</span>
             <input id="amount-4" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-4" title="＋で区切る">+</button>
           </div>
           <div class="card-row2">
-            <span class="row-label">税金</span>
+            <span class="pill pill-navy">税金</span>
             <div class="result tax-result" id="tax-4">¥0</div>
             <span class="arrow">→</span>
-            <span class="row-label">税込</span>
+            <span class="pill pill-green">税込</span>
             <div class="result included-result" id="included-4">¥0</div>
             <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
           </div>
@@ -129,16 +136,16 @@
         <!-- 5% -->
         <div class="rate-card" data-rate="5">
           <div class="card-row1">
-            <div class="rate-badge">5%</div>
-            <span class="row-label">税抜金額</span>
+            <div class="rate-badge"><span class="badge-num">5</span><span class="badge-pct">%</span></div>
+            <span class="pill pill-blue">税抜金額</span>
             <input id="amount-5" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-5" title="＋で区切る">+</button>
           </div>
           <div class="card-row2">
-            <span class="row-label">税金</span>
+            <span class="pill pill-navy">税金</span>
             <div class="result tax-result" id="tax-5">¥0</div>
             <span class="arrow">→</span>
-            <span class="row-label">税込</span>
+            <span class="pill pill-green">税込</span>
             <div class="result included-result" id="included-5">¥0</div>
             <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
           </div>
@@ -147,16 +154,16 @@
         <!-- 6% -->
         <div class="rate-card" data-rate="6">
           <div class="card-row1">
-            <div class="rate-badge">6%</div>
-            <span class="row-label">税抜金額</span>
+            <div class="rate-badge"><span class="badge-num">6</span><span class="badge-pct">%</span></div>
+            <span class="pill pill-blue">税抜金額</span>
             <input id="amount-6" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-6" title="＋で区切る">+</button>
           </div>
           <div class="card-row2">
-            <span class="row-label">税金</span>
+            <span class="pill pill-navy">税金</span>
             <div class="result tax-result" id="tax-6">¥0</div>
             <span class="arrow">→</span>
-            <span class="row-label">税込</span>
+            <span class="pill pill-green">税込</span>
             <div class="result included-result" id="included-6">¥0</div>
             <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
           </div>
@@ -165,16 +172,16 @@
         <!-- 7% -->
         <div class="rate-card" data-rate="7">
           <div class="card-row1">
-            <div class="rate-badge">7%</div>
-            <span class="row-label">税抜金額</span>
+            <div class="rate-badge"><span class="badge-num">7</span><span class="badge-pct">%</span></div>
+            <span class="pill pill-blue">税抜金額</span>
             <input id="amount-7" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-7" title="＋で区切る">+</button>
           </div>
           <div class="card-row2">
-            <span class="row-label">税金</span>
+            <span class="pill pill-navy">税金</span>
             <div class="result tax-result" id="tax-7">¥0</div>
             <span class="arrow">→</span>
-            <span class="row-label">税込</span>
+            <span class="pill pill-green">税込</span>
             <div class="result included-result" id="included-7">¥0</div>
             <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
           </div>
@@ -183,16 +190,16 @@
         <!-- 8% -->
         <div class="rate-card" data-rate="8">
           <div class="card-row1">
-            <div class="rate-badge">8%</div>
-            <span class="row-label">税抜金額</span>
+            <div class="rate-badge"><span class="badge-num">8</span><span class="badge-pct">%</span></div>
+            <span class="pill pill-blue">税抜金額</span>
             <input id="amount-8" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-8" title="＋で区切る">+</button>
           </div>
           <div class="card-row2">
-            <span class="row-label">税金</span>
+            <span class="pill pill-navy">税金</span>
             <div class="result tax-result" id="tax-8">¥0</div>
             <span class="arrow">→</span>
-            <span class="row-label">税込</span>
+            <span class="pill pill-green">税込</span>
             <div class="result included-result" id="included-8">¥0</div>
             <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
           </div>
@@ -201,16 +208,16 @@
         <!-- 9% -->
         <div class="rate-card" data-rate="9">
           <div class="card-row1">
-            <div class="rate-badge">9%</div>
-            <span class="row-label">税抜金額</span>
+            <div class="rate-badge"><span class="badge-num">9</span><span class="badge-pct">%</span></div>
+            <span class="pill pill-blue">税抜金額</span>
             <input id="amount-9" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-9" title="＋で区切る">+</button>
           </div>
           <div class="card-row2">
-            <span class="row-label">税金</span>
+            <span class="pill pill-navy">税金</span>
             <div class="result tax-result" id="tax-9">¥0</div>
             <span class="arrow">→</span>
-            <span class="row-label">税込</span>
+            <span class="pill pill-green">税込</span>
             <div class="result included-result" id="included-9">¥0</div>
             <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
           </div>
@@ -219,16 +226,16 @@
         <!-- 10% -->
         <div class="rate-card" data-rate="10">
           <div class="card-row1">
-            <div class="rate-badge">10%</div>
-            <span class="row-label">税抜金額</span>
+            <div class="rate-badge"><span class="badge-num">10</span><span class="badge-pct">%</span></div>
+            <span class="pill pill-blue">税抜金額</span>
             <input id="amount-10" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-10" title="＋で区切る">+</button>
           </div>
           <div class="card-row2">
-            <span class="row-label">税金</span>
+            <span class="pill pill-navy">税金</span>
             <div class="result tax-result" id="tax-10">¥0</div>
             <span class="arrow">→</span>
-            <span class="row-label">税込</span>
+            <span class="pill pill-green">税込</span>
             <div class="result included-result" id="included-10">¥0</div>
             <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
           </div>
@@ -261,7 +268,6 @@
     </footer>
 
     <script>
-      const RATES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
       const cards = document.querySelectorAll('.rate-card');
       const totalElement = document.getElementById('total');
       const subtotalPretax = document.getElementById('subtotal-pretax');
