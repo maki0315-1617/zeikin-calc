@@ -34,124 +34,206 @@
         <strong style="color:#4f7cff">＋</strong> ボタンで複数金額の区切り入力ができます。
       </p>
 
-      <div class="table">
-        <div class="table-head">
-          <div>税率</div>
-          <div>税抜金額</div>
-          <div class="text-center">税金</div>
-          <div class="text-center">税込金額</div>
-          <div></div>
+      <div class="card-list">
+
+        <!-- 0% -->
+        <div class="rate-card" data-rate="0">
+          <div class="card-row1">
+            <div class="rate-badge">0%</div>
+            <span class="row-label">税抜金額</span>
+            <input id="amount-0" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
+            <button type="button" class="plus-btn" data-target="amount-0" title="＋で区切る">+</button>
+          </div>
+          <div class="card-row2">
+            <span class="row-label">税金</span>
+            <div class="result tax-result" id="tax-0">¥0</div>
+            <span class="arrow">→</span>
+            <span class="row-label">税込</span>
+            <div class="result included-result" id="included-0">¥0</div>
+            <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
+          </div>
         </div>
 
-        <div class="rate-row" data-rate="1">
-          <div class="rate-label">1%</div>
-          <div class="cell input-cell">
-            <input id="amount-1" class="amount-input" type="text" inputmode="text" placeholder="例: 1000+500" />
+        <!-- 1% -->
+        <div class="rate-card" data-rate="1">
+          <div class="card-row1">
+            <div class="rate-badge">1%</div>
+            <span class="row-label">税抜金額</span>
+            <input id="amount-1" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-1" title="＋で区切る">+</button>
           </div>
-          <div class="cell result" id="tax-1">¥0</div>
-          <div class="cell result included" id="included-1">¥0</div>
-          <div class="cell top-cell"><button type="button" class="top-btn" title="先頭へ戻る">↑</button></div>
+          <div class="card-row2">
+            <span class="row-label">税金</span>
+            <div class="result tax-result" id="tax-1">¥0</div>
+            <span class="arrow">→</span>
+            <span class="row-label">税込</span>
+            <div class="result included-result" id="included-1">¥0</div>
+            <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
+          </div>
         </div>
 
-        <div class="rate-row" data-rate="2">
-          <div class="rate-label">2%</div>
-          <div class="cell input-cell">
-            <input id="amount-2" class="amount-input" type="text" inputmode="text" placeholder="例: 1000+500" />
+        <!-- 2% -->
+        <div class="rate-card" data-rate="2">
+          <div class="card-row1">
+            <div class="rate-badge">2%</div>
+            <span class="row-label">税抜金額</span>
+            <input id="amount-2" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-2" title="＋で区切る">+</button>
           </div>
-          <div class="cell result" id="tax-2">¥0</div>
-          <div class="cell result included" id="included-2">¥0</div>
-          <div class="cell top-cell"><button type="button" class="top-btn" title="先頭へ戻る">↑</button></div>
+          <div class="card-row2">
+            <span class="row-label">税金</span>
+            <div class="result tax-result" id="tax-2">¥0</div>
+            <span class="arrow">→</span>
+            <span class="row-label">税込</span>
+            <div class="result included-result" id="included-2">¥0</div>
+            <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
+          </div>
         </div>
 
-        <div class="rate-row" data-rate="3">
-          <div class="rate-label">3%</div>
-          <div class="cell input-cell">
-            <input id="amount-3" class="amount-input" type="text" inputmode="text" placeholder="例: 1000+500" />
+        <!-- 3% -->
+        <div class="rate-card" data-rate="3">
+          <div class="card-row1">
+            <div class="rate-badge">3%</div>
+            <span class="row-label">税抜金額</span>
+            <input id="amount-3" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-3" title="＋で区切る">+</button>
           </div>
-          <div class="cell result" id="tax-3">¥0</div>
-          <div class="cell result included" id="included-3">¥0</div>
-          <div class="cell top-cell"><button type="button" class="top-btn" title="先頭へ戻る">↑</button></div>
+          <div class="card-row2">
+            <span class="row-label">税金</span>
+            <div class="result tax-result" id="tax-3">¥0</div>
+            <span class="arrow">→</span>
+            <span class="row-label">税込</span>
+            <div class="result included-result" id="included-3">¥0</div>
+            <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
+          </div>
         </div>
 
-        <div class="rate-row" data-rate="4">
-          <div class="rate-label">4%</div>
-          <div class="cell input-cell">
-            <input id="amount-4" class="amount-input" type="text" inputmode="text" placeholder="例: 1000+500" />
+        <!-- 4% -->
+        <div class="rate-card" data-rate="4">
+          <div class="card-row1">
+            <div class="rate-badge">4%</div>
+            <span class="row-label">税抜金額</span>
+            <input id="amount-4" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-4" title="＋で区切る">+</button>
           </div>
-          <div class="cell result" id="tax-4">¥0</div>
-          <div class="cell result included" id="included-4">¥0</div>
-          <div class="cell top-cell"><button type="button" class="top-btn" title="先頭へ戻る">↑</button></div>
+          <div class="card-row2">
+            <span class="row-label">税金</span>
+            <div class="result tax-result" id="tax-4">¥0</div>
+            <span class="arrow">→</span>
+            <span class="row-label">税込</span>
+            <div class="result included-result" id="included-4">¥0</div>
+            <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
+          </div>
         </div>
 
-        <div class="rate-row" data-rate="5">
-          <div class="rate-label">5%</div>
-          <div class="cell input-cell">
-            <input id="amount-5" class="amount-input" type="text" inputmode="text" placeholder="例: 1000+500" />
+        <!-- 5% -->
+        <div class="rate-card" data-rate="5">
+          <div class="card-row1">
+            <div class="rate-badge">5%</div>
+            <span class="row-label">税抜金額</span>
+            <input id="amount-5" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-5" title="＋で区切る">+</button>
           </div>
-          <div class="cell result" id="tax-5">¥0</div>
-          <div class="cell result included" id="included-5">¥0</div>
-          <div class="cell top-cell"><button type="button" class="top-btn" title="先頭へ戻る">↑</button></div>
+          <div class="card-row2">
+            <span class="row-label">税金</span>
+            <div class="result tax-result" id="tax-5">¥0</div>
+            <span class="arrow">→</span>
+            <span class="row-label">税込</span>
+            <div class="result included-result" id="included-5">¥0</div>
+            <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
+          </div>
         </div>
 
-        <div class="rate-row" data-rate="6">
-          <div class="rate-label">6%</div>
-          <div class="cell input-cell">
-            <input id="amount-6" class="amount-input" type="text" inputmode="text" placeholder="例: 1000+500" />
+        <!-- 6% -->
+        <div class="rate-card" data-rate="6">
+          <div class="card-row1">
+            <div class="rate-badge">6%</div>
+            <span class="row-label">税抜金額</span>
+            <input id="amount-6" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-6" title="＋で区切る">+</button>
           </div>
-          <div class="cell result" id="tax-6">¥0</div>
-          <div class="cell result included" id="included-6">¥0</div>
-          <div class="cell top-cell"><button type="button" class="top-btn" title="先頭へ戻る">↑</button></div>
+          <div class="card-row2">
+            <span class="row-label">税金</span>
+            <div class="result tax-result" id="tax-6">¥0</div>
+            <span class="arrow">→</span>
+            <span class="row-label">税込</span>
+            <div class="result included-result" id="included-6">¥0</div>
+            <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
+          </div>
         </div>
 
-        <div class="rate-row" data-rate="7">
-          <div class="rate-label">7%</div>
-          <div class="cell input-cell">
-            <input id="amount-7" class="amount-input" type="text" inputmode="text" placeholder="例: 1000+500" />
+        <!-- 7% -->
+        <div class="rate-card" data-rate="7">
+          <div class="card-row1">
+            <div class="rate-badge">7%</div>
+            <span class="row-label">税抜金額</span>
+            <input id="amount-7" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-7" title="＋で区切る">+</button>
           </div>
-          <div class="cell result" id="tax-7">¥0</div>
-          <div class="cell result included" id="included-7">¥0</div>
-          <div class="cell top-cell"><button type="button" class="top-btn" title="先頭へ戻る">↑</button></div>
+          <div class="card-row2">
+            <span class="row-label">税金</span>
+            <div class="result tax-result" id="tax-7">¥0</div>
+            <span class="arrow">→</span>
+            <span class="row-label">税込</span>
+            <div class="result included-result" id="included-7">¥0</div>
+            <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
+          </div>
         </div>
 
-        <div class="rate-row" data-rate="8">
-          <div class="rate-label">8%</div>
-          <div class="cell input-cell">
-            <input id="amount-8" class="amount-input" type="text" inputmode="text" placeholder="例: 1000+500" />
+        <!-- 8% -->
+        <div class="rate-card" data-rate="8">
+          <div class="card-row1">
+            <div class="rate-badge">8%</div>
+            <span class="row-label">税抜金額</span>
+            <input id="amount-8" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-8" title="＋で区切る">+</button>
           </div>
-          <div class="cell result" id="tax-8">¥0</div>
-          <div class="cell result included" id="included-8">¥0</div>
-          <div class="cell top-cell"><button type="button" class="top-btn" title="先頭へ戻る">↑</button></div>
+          <div class="card-row2">
+            <span class="row-label">税金</span>
+            <div class="result tax-result" id="tax-8">¥0</div>
+            <span class="arrow">→</span>
+            <span class="row-label">税込</span>
+            <div class="result included-result" id="included-8">¥0</div>
+            <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
+          </div>
         </div>
 
-        <div class="rate-row" data-rate="9">
-          <div class="rate-label">9%</div>
-          <div class="cell input-cell">
-            <input id="amount-9" class="amount-input" type="text" inputmode="text" placeholder="例: 1000+500" />
+        <!-- 9% -->
+        <div class="rate-card" data-rate="9">
+          <div class="card-row1">
+            <div class="rate-badge">9%</div>
+            <span class="row-label">税抜金額</span>
+            <input id="amount-9" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-9" title="＋で区切る">+</button>
           </div>
-          <div class="cell result" id="tax-9">¥0</div>
-          <div class="cell result included" id="included-9">¥0</div>
-          <div class="cell top-cell"><button type="button" class="top-btn" title="先頭へ戻る">↑</button></div>
+          <div class="card-row2">
+            <span class="row-label">税金</span>
+            <div class="result tax-result" id="tax-9">¥0</div>
+            <span class="arrow">→</span>
+            <span class="row-label">税込</span>
+            <div class="result included-result" id="included-9">¥0</div>
+            <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
+          </div>
         </div>
 
-        <div class="rate-row" data-rate="10">
-          <div class="rate-label">10%</div>
-          <div class="cell input-cell">
-            <input id="amount-10" class="amount-input" type="text" inputmode="text" placeholder="例: 1000+500" />
+        <!-- 10% -->
+        <div class="rate-card" data-rate="10">
+          <div class="card-row1">
+            <div class="rate-badge">10%</div>
+            <span class="row-label">税抜金額</span>
+            <input id="amount-10" class="amount-input" type="text" inputmode="numeric" placeholder="例: 1000+500" />
             <button type="button" class="plus-btn" data-target="amount-10" title="＋で区切る">+</button>
           </div>
-          <div class="cell result" id="tax-10">¥0</div>
-          <div class="cell result included" id="included-10">¥0</div>
-          <div class="cell top-cell"><button type="button" class="top-btn" title="先頭へ戻る">↑</button></div>
+          <div class="card-row2">
+            <span class="row-label">税金</span>
+            <div class="result tax-result" id="tax-10">¥0</div>
+            <span class="arrow">→</span>
+            <span class="row-label">税込</span>
+            <div class="result included-result" id="included-10">¥0</div>
+            <button type="button" class="top-btn" title="先頭へ戻る">↑</button>
+          </div>
         </div>
+
       </div>
     </main>
 
@@ -179,7 +261,8 @@
     </footer>
 
     <script>
-      const rows = document.querySelectorAll('.rate-row');
+      const RATES = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+      const cards = document.querySelectorAll('.rate-card');
       const totalElement = document.getElementById('total');
       const subtotalPretax = document.getElementById('subtotal-pretax');
       const subtotalTaxes = document.getElementById('subtotal-taxes');
@@ -204,11 +287,11 @@
         let totalInc = 0, totalPretax = 0, totalTax = 0;
         const taxBreakdown = [];
 
-        rows.forEach((row) => {
-          const rate = Number(row.dataset.rate);
-          const input = row.querySelector('.amount-input');
-          const taxEl = row.querySelector('.result:not(.included)');
-          const incEl = row.querySelector('.included');
+        cards.forEach((card) => {
+          const rate = Number(card.dataset.rate);
+          const input = card.querySelector('.amount-input');
+          const taxEl = card.querySelector('.tax-result');
+          const incEl = card.querySelector('.included-result');
           const raw = sanitizeInput(input);
           const amount = raw.split('+').filter(Boolean)
             .reduce((s, t) => s + Number(t || 0), 0);
@@ -217,6 +300,10 @@
 
           taxEl.textContent = fmt(tax);
           incEl.textContent = fmt(included);
+
+          const hasValue = amount > 0;
+          card.classList.toggle('has-value', hasValue);
+
           totalInc += included;
           totalPretax += amount;
           totalTax += tax;
@@ -225,7 +312,6 @@
 
         totalElement.textContent = fmt(totalInc);
         totalElement.style.color = totalInc > 0 ? '#4f7cff' : '#bbc8e6';
-
         subtotalPretax.textContent = fmt(totalPretax);
         subtotalPretax.style.color = totalPretax > 0 ? '#1f2a44' : '#bbc8e6';
 
@@ -259,6 +345,8 @@
           const v = target.value.trim();
           target.value = v ? `${v}+` : '';
           target.focus();
+          const pos = target.value.length;
+          target.setSelectionRange(pos, pos);
           calculate();
         });
       });
